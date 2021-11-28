@@ -4,7 +4,7 @@ echo "BMI 지수 계산하기"
 echo "-----------------------------------"
 read -p "몸무게를 kg단위로 입력하세요: " weight
 read -p "키를 m단위로 입력하세요: " height
-bmi=`expr "scale=2; $weight / ( $height * $height )" |bc`
+bmi=`expr "scale=2; $weight / ( $height * $height )" | bc`
 echo $bmi
 if [ 1 -eq "$(( echo "$bmi < 18.5") | bc )" ]
 then
